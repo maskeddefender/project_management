@@ -7,7 +7,6 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_ard0",
-  "naming_series",
   "task_name",
   "project",
   "column_break_7d7a",
@@ -31,14 +30,6 @@
   {
    "fieldname": "section_break_ard0",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Naming Series",
-   "options": "{project}-{task_name}-.####",
-   "reqd": 1
   },
   {
    "fieldname": "task_name",
@@ -75,6 +66,8 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Planned\nIn Progress\nOn Hold\nCompleted\nCancelled"
   },
@@ -148,7 +141,7 @@
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2025-03-20 16:15:54.537150",
+ "modified": "2025-03-26 10:20:44.107942",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Task",
