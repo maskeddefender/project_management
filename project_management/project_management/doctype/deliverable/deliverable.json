@@ -12,7 +12,7 @@
   "column_break_tvuh",
   "due_date",
   "priority",
-  "attachments",
+  "document",
   "section_break_faah",
   "tasks",
   "section_break_ugpg",
@@ -40,10 +40,13 @@
    "options": "Project"
   },
   {
+   "default": "In Progress",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
-   "options": "Draft\nAwaiting Client Review\nRequired Changes\nApproved"
+   "options": "In Progress\nAwaiting Client Review\nRequired Changes\nApproved\nRejected",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_tvuh",
@@ -92,11 +95,6 @@
    "label": "Approved By"
   },
   {
-   "fieldname": "attachments",
-   "fieldtype": "Attach",
-   "label": "Attachments"
-  },
-  {
    "fieldname": "column_break_sbzz",
    "fieldtype": "Column Break"
   },
@@ -119,11 +117,16 @@
    "fieldname": "deliverable_image",
    "fieldtype": "Attach Image",
    "label": "Deliverable Image"
+  },
+  {
+   "fieldname": "document",
+   "fieldtype": "Attach",
+   "label": "Document"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-29 15:40:37.656259",
+ "modified": "2025-03-30 01:43:20.649408",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Deliverable",
