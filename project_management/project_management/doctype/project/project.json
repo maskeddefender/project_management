@@ -30,20 +30,22 @@
   {
    "fieldname": "naming_series",
    "fieldtype": "Select",
-   "in_list_view": 1,
    "label": "Series",
    "options": "PROJ-.####",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "project_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Project Name",
    "reqd": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Planned\nIn Progress\nOn Hold\nCompleted\nCancelled"
   },
@@ -53,6 +55,7 @@
    "label": "Project Type"
   },
   {
+   "default": "Medium",
    "fieldname": "priority",
    "fieldtype": "Select",
    "label": "Priority",
@@ -71,6 +74,7 @@
   {
    "fieldname": "end_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "End Date"
   },
   {
@@ -81,6 +85,7 @@
   {
    "fieldname": "progress",
    "fieldtype": "Percent",
+   "in_list_view": 1,
    "label": "Progress"
   },
   {
@@ -134,7 +139,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-29 15:13:16.908393",
+ "modified": "2025-03-29 21:43:08.051649",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Project",
