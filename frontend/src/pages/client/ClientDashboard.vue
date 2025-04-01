@@ -4,16 +4,16 @@
     <nav class="bg-blue-600 text-white shadow-lg">
       <div class="container mx-auto px-4 py-3 flex justify-between items-center">
         <div class="flex items-center space-x-2">
-          <img src="../assets/logo.png" alt="Logo" class="h-8">
+          <!-- <img src="../assets/logo.png" alt="Logo" class="h-8"> -->
           <span class="text-xl font-semibold">Project Management</span>
         </div>
         
-        <div class="hidden md:flex space-x-6">
+        <!-- <div class="hidden md:flex space-x-6">
           <router-link to="/client/dashboard" class="hover:text-blue-200">Dashboard</router-link>
           <router-link to="/client/projects" class="hover:text-blue-200">My Projects</router-link>
           <router-link to="/client/messages" class="hover:text-blue-200">Messages</router-link>
           <router-link to="/client/settings" class="hover:text-blue-200">Settings</router-link>
-        </div>
+        </div> -->
         
         <div class="flex items-center space-x-4">
           <span class="hidden sm:inline">Welcome, {{ userName }}</span>
