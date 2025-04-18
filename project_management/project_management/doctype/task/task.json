@@ -16,7 +16,7 @@
   "assigned_to",
   "status",
   "priority",
-  "time_in_hours",
+  "time_in_minutes",
   "progress_",
   "document",
   "column_break_2oqk",
@@ -26,7 +26,11 @@
   "old_parent",
   "parent_task",
   "section_break_jtrs",
-  "description"
+  "description",
+  "section_break_kxji",
+  "time_logs",
+  "actual_start_date",
+  "actual_end_date"
  ],
  "fields": [
   {
@@ -71,7 +75,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Planned\nIn Progress\nOn Hold\nCompleted\nCancelled"
+   "options": "Planned\nIn Progress\nOn Hold\nPaused\nCompleted\nCancelled"
   },
   {
    "fieldname": "priority",
@@ -80,19 +84,14 @@
    "options": "Low\nMedium\nHigh\nCritical"
   },
   {
-   "fieldname": "time_in_hours",
-   "fieldtype": "Float",
-   "label": "Time (in Hours)",
-   "precision": "2"
-  },
-  {
    "fieldname": "column_break_2oqk",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "progress_",
    "fieldtype": "Percent",
-   "label": "Progress %"
+   "label": "Progress %",
+   "read_only": 1
   },
   {
    "fieldname": "document",
@@ -149,12 +148,42 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "section_break_kxji",
+   "fieldtype": "Section Break",
+   "label": "Actual Time Logs"
+  },
+  {
+   "fieldname": "time_logs",
+   "fieldtype": "Table",
+   "label": "Time Logs",
+   "options": "Task Time Log"
+  },
+  {
+   "fieldname": "actual_start_date",
+   "fieldtype": "Datetime",
+   "label": "Actual Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_end_date",
+   "fieldtype": "Datetime",
+   "label": "Actual End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "time_in_minutes",
+   "fieldtype": "Float",
+   "label": "Time (in Mins)",
+   "precision": "2",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2025-04-07 13:07:20.445037",
+ "modified": "2025-04-18 23:18:45.617964",
  "modified_by": "Administrator",
  "module": "Project Management",
  "name": "Task",
