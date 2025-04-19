@@ -37,7 +37,7 @@ class Deliverable(Document):
             frappe.throw(f"Due date cannot be before {earliest_allowed_date.strftime('%Y-%m-%d')}")
             
         if project_end and due_date >= project_end:
-            frappe.throw(f"Due date must be before the project end date ({project_end.strftime('%Y-%m-%d')}")
+            frappe.throw(f"Due date must be before the project end date ({project_end.strftime('%Y-%m-%d')})")
 
     def validate_tasks_completion(self):
         if not self.tasks:
