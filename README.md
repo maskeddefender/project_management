@@ -137,7 +137,10 @@ The system is built using **Frappe Framework**, leveraging its modular DocType s
 
 Raven is used extensively to enable real-time collaboration through automated bots and workspace channels.
 
-### Notification Triggers
+---
+
+
+### Notification Triggers using Email
 
 | Trigger | Notification |
 |--------|--------------|
