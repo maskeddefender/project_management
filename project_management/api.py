@@ -511,7 +511,8 @@ def get_assigned_tasks_for_vendor():
 				"end_date",
 				"project",
 				"assigned_to",
-				"progress_"
+				"progress_",
+				"priority"
 			]
 		)
 	else:
@@ -522,37 +523,41 @@ def get_assigned_tasks_for_vendor():
 
 @frappe.whitelist()
 def get_pending_deliverables_for_vendor():
-	user_email = frappe.session.user
+    user_email = frappe.session.user
 
-	task_deliverables = frappe.get_all(
-		"Deliverable Task",
-		filters={"assigned_to": user_email},  
-		fields=["parent"],
-		distinct=True
-	)
+    task_deliverables = frappe.get_all(
+        "Deliverable Task",
+        filters={
+            "assigned_to": user_email,
+            "progress_": 100
+        },
+        fields=["parent"],
+        distinct=True
+    )
 
-	deliverable_names = list(set(d["parent"] for d in task_deliverables))
-	if not deliverable_names:
-		return []
+    deliverable_names = list(set(d["parent"] for d in task_deliverables))
+    if not deliverable_names:
+        return []
 
-	deliverables = frappe.get_all(
-		"Deliverable",
-		filters={
-			"name": ["in", deliverable_names],
-		},
-		fields=[
-			"name",
-			"deliverable_name",
-			"project",
-			"status",
-			"due_date",
-			"priority",
-			"submission_date"
-		],
-		order_by="due_date asc"
-	)
+    deliverables = frappe.get_all(
+        "Deliverable",
+        filters={
+            "name": ["in", deliverable_names],
+        },
+        fields=[
+            "name",
+            "deliverable_name",
+            "project",
+            "status",
+            "due_date",
+            "priority",
+            "submission_date"
+        ],
+        order_by="due_date asc"
+    )
 
-	return deliverables
+    return deliverables
+
 
 @frappe.whitelist(allow_guest=False)
 def submit_deliverable():
@@ -755,3 +760,35 @@ def get_client_for_guest(user=None):
         return guest_access[0].client
     
     return None
+
+@frappe.whitelist()
+def get_deliverable_comments(deliverable_name):
+    try:
+        comments = frappe.get_all("Comment",
+            filters={
+                "reference_doctype": "Deliverable",
+                "reference_name": deliverable_name
+            },
+            fields=["content", "comment_by as commented_by", "creation", "comment_type"]
+        )
+        
+        # activity = frappe.get_all("Activity Log",
+        #     filters={
+        #         "reference_doctype": "Deliverable",
+        #         "reference_name": deliverable_name
+        #     },
+        #     fields=["subject as content", "user as commented_by", "creation", "'Activity' as comment_type"]
+        # )
+        
+        # all_comments = comments + activity
+        all_comments = comments 
+        all_comments.sort(key=lambda x: x["creation"], reverse=True)
+        
+        return all_comments
+        
+    except Exception as e:
+        frappe.log_error(f"Error fetching deliverable comments: {str(e)}")
+        return []
+
+
+
