@@ -1,5 +1,5 @@
 <div align="center" markdown="1">
-	<img src=".github/images/project_management.png" width="80" height="80"/>
+	<img src=".github/workflows/images/project_management.png" width="80" height="80"/>
 	<h1>Project Management Application</h1>
 
  **A full-stack, modular project management system built on the **Frappe Framework****
