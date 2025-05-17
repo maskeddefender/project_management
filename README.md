@@ -145,7 +145,7 @@ The system is built using **Frappe Framework**, leveraging its modular DocType s
 
 ## Raven Bot Integration
 
-Raven is Integrated through a open channel button.
+#### Raven is Integrated through a open channel button.
 ![image](https://github.com/user-attachments/assets/87eb3fd1-8f5a-4649-ae76-8d3d3a43ac7f)
 ![image](https://github.com/user-attachments/assets/8bd84f8a-5a84-44c0-bc7e-a98549ce4510)
 
@@ -163,6 +163,15 @@ Raven is Integrated through a open channel button.
 | Deliverable Submitted | Response to the Assigne |
 | Feedback Added | Notification to assigned vendor/team |
 
+<details>
+<summary>Sample Notification Layout</summary>
+	
+![Project Created](https://github.com/user-attachments/assets/a58ea78d-8242-43fd-81b0-5973b56ea61e)
+![Task Assigned](https://github.com/user-attachments/assets/98a3855f-fc70-4913-8436-f5e13aceb514)
+![Deliverable Submitted](https://github.com/user-attachments/assets/4f28a39b-7579-4d31-9c8a-3c40b53583c3)
+![Deliverable Submitted](https://github.com/user-attachments/assets/7ef34042-c82c-45d6-8ac4-389615258abf)
+
+</details>
 
 ---
 
@@ -209,7 +218,8 @@ Built using **Vue.js + Frappe UI**, the portals provide role-specific, secure da
 ![image](https://github.com/user-attachments/assets/bf1ffcea-7c8f-4d04-a34e-c5cb2b6d9ec8)
 ![image](https://github.com/user-attachments/assets/e164c610-8639-41b3-98e7-f9a162433f75)
 ![image](https://github.com/user-attachments/assets/4786672a-bb9f-4e40-8a7e-4c450ff6df9b)
-- Workflow state changed after submission
+
+### Workflow state changed after submission
 ![image](https://github.com/user-attachments/assets/0b8ba02f-2d4c-4c6b-8107-c25101481835)
 
 
